@@ -20,7 +20,7 @@ form {
 
   button {
     color: #fff;
-    background-color: #4cbc9a;
+    background-color: $button-color;
 
     border-radius: 10px;
     border: none;
@@ -31,7 +31,7 @@ form {
 
     &:disabled {
       color: #cecece;
-      background-color: #8cc8b6;
+      background-color: $disabled-input-color;
 
       cursor: not-allowed;
     }
@@ -42,6 +42,7 @@ form {
     width: 100%;
 
     mat-icon {
+      color: #A098AE;
       position: absolute;
       top: 15px;
       left: 15px;

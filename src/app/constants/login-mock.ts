@@ -1,5 +1,5 @@
 const LOGIN_USER = {
-  username: 'admin@email.com',
+  email: 'admin@email.com',
   password: 'admin'
 }
 

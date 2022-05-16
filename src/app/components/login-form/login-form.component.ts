@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import LOGIN_USER from 'src/app/constants/login';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'DIH-login-form',
@@ -12,18 +12,13 @@ export class LoginFormComponent implements OnInit {
   password: string;
   failedLogin: boolean = false;
 
-  constructor(private route: Router) {}
+  constructor(private route: Router, private userService: UserService) {}
 
   ngOnInit(): void {}
 
   validate() {
-    if (
-      this.email == LOGIN_USER.username &&
-      this.password == LOGIN_USER.password
-    ) {
+    if (this.userService.validateUser(this.email, this.password)) {
       this.route.navigateByUrl('dashboard');
-    } else {
-      this.failedLogin = true;
     }
 
     // localStorage pra não pedir login toda vez

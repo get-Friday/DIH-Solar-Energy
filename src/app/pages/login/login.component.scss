@@ -1,6 +1,6 @@
 @import '/src/styles.scss';
 
-main {
+#container {
   @include displayFlex(row, normal, normal, normal);
 
   height: 100%;

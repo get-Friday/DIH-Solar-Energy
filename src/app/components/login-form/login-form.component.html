@@ -1,19 +1,25 @@
 <form #login="ngForm">
-  <input
-    type="email"
-    name="email"
-    id="email"
-    pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
-    [(ngModel)]="email"
-    required
-  />
-  <input
-    type="password"
-    name="password"
-    id="password"
-    [(ngModel)]="password"
-    required
-  />
+  <div class="input-container">
+    <mat-icon>mail_outline</mat-icon>
+    <input
+      type="email"
+      name="email"
+      id="email"
+      pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
+      [(ngModel)]="email"
+      required
+    />
+  </div>
+  <div class="input-container">
+    <mat-icon>lock_outline</mat-icon>
+    <input
+      type="password"
+      name="password"
+      id="password"
+      [(ngModel)]="password"
+      required
+    />
+  </div>
   <button type="submit" [disabled]="!login.form.valid" routerLink="dashboard">
     Login
   </button>

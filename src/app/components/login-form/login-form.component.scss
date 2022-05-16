@@ -5,13 +5,16 @@ form {
 
   width: 518px;
 
+  font-size: 16px;
+
   input {
     border: 1px solid;
     border-radius: 10px;
-
     outline: none;
 
-    padding: 1.2rem 0;
+    width: 464px;
+
+    padding: 1.2rem 10px 1.2rem 44px;
     margin-bottom: 20px;
   }
 
@@ -31,6 +34,17 @@ form {
       background-color: #8cc8b6;
 
       cursor: not-allowed;
+    }
+  }
+
+  .input-container {
+    position: relative;
+    width: 100%;
+
+    mat-icon {
+      position: absolute;
+      top: 15px;
+      left: 15px;
     }
   }
 }

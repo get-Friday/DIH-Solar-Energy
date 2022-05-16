@@ -1,0 +1,18 @@
+<form (ngSubmit)="onSubmit()" #login="ngForm">
+  <input
+    type="email"
+    name="email"
+    id="email"
+    pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
+    [(ngModel)]="email"
+    required
+  />
+  <input
+    type="password"
+    name="password"
+    id="password"
+    [(ngModel)]="password"
+    required
+  />
+  <button type="submit" [disabled]="!login.form.valid">Login</button>
+</form>

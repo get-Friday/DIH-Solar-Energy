@@ -15,6 +15,5 @@ export class LoginFormComponent implements OnInit {
   }
 
   onSubmit() {
-
   }
 }

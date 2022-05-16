@@ -1,4 +1,4 @@
-<form (ngSubmit)="onSubmit()" #login="ngForm">
+<form #login="ngForm">
   <input
     type="email"
     name="email"
@@ -14,5 +14,7 @@
     [(ngModel)]="password"
     required
   />
-  <button type="submit" [disabled]="!login.form.valid">Login</button>
+  <button type="submit" [disabled]="!login.form.valid" routerLink="dashboard">
+    Login
+  </button>
 </form>

@@ -1,0 +1,36 @@
+@import '/src/styles.scss';
+
+main {
+  @include displayFlex(row, normal, normal, normal);
+
+  height: 100%;
+
+  #cover {
+    width: 979px;
+
+    overflow: hidden;
+
+    img {
+      object-position: -399px;
+      object-fit: cover;
+
+      height: 100%;
+    }
+  }
+
+  #login {
+    @include displayFlex(column, center, normal, center);
+
+    padding: 132px 0 0 229px;
+
+    img {
+      height: 309px;
+      width: 309px;
+    }
+
+    h2 {
+      margin-bottom: 37px;
+      font-family: 'Roboto Slab', serif;
+    }
+  }
+}

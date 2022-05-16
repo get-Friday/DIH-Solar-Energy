@@ -22,7 +22,10 @@
       required
     />
   </div>
-  <button type="submit" [disabled]="!login.form.valid" routerLink="dashboard">
+  <div *ngIf="failedLogin" id="warn">
+    Email ou senha não encontrados.
+  </div>
+  <button [disabled]="!login.form.valid" (click)="validate()">
     Login
   </button>
 </form>

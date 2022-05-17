@@ -7,6 +7,7 @@ import LOGIN_USER from '../constants/login-mock';
 export class UserService {
   private admin = LOGIN_USER;
   isLogged: boolean = false;
+  // TODO: FIX this variable reading on app.component.ts
 
   constructor() {}
 

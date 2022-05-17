@@ -3,13 +3,10 @@ import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { Route, RouterModule } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
+import { AdminModule } from './admin/admin.module';
 
 import { AppComponent } from './app.component';
 import { LoginFormComponent } from './components/login-form/login-form.component';
-import { NavComponent } from './components/nav/nav.component';
-import { DashboardComponent } from './pages/dashboard/dashboard.component';
-import { UnitsComponent } from './pages/units/units.component';
-import { RegEnergyComponent } from './pages/reg-energy/reg-energy.component';
 import { LoginComponent } from './pages/login/login.component';
 
 const ROUTES: Route[] = [
@@ -19,29 +16,19 @@ const ROUTES: Route[] = [
   },
   {
     path: 'dashboard',
-    component: DashboardComponent,
-  },
-  {
-    path: 'units',
-    component: UnitsComponent,
-  },
-  {
-    path: 'energy',
-    component: RegEnergyComponent,
-  },
+    loadChildren: () => import('./admin/admin.module')
+      .then((m) => m.AdminModule)
+  }
 ]
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginFormComponent,
-    NavComponent,
-    DashboardComponent,
-    UnitsComponent,
-    RegEnergyComponent,
     LoginComponent
   ],
   imports: [
+    AdminModule,
     BrowserModule,
     FormsModule,
     RouterModule.forRoot(ROUTES),

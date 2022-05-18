@@ -3,7 +3,21 @@
 main {
   @include displayFlex(row, normal, normal, normal);
 
-  width: 100%;
+  min-width: 100vw;
 
   font-family: 'Poppins', sans-serif;
+
+  background-color: #FAFAFA;
+
+  .content{
+    @include displayFlex(column, normal, normal, normal);
+
+    flex: 1;
+
+    h1 {
+      background-color: #FFF;
+      margin: 0;
+      padding: 33px 0 33px 40px;
+    }
+  }
 }

@@ -3,8 +3,12 @@
 nav {
   @include displayFlex(column, normal, normal, center);
 
-  height: 100%;
-  width: 345px;
+  height: 100vh;
+  max-width: 345px;
+
+  padding: 0 46px;
+
+  background-color: #FFF;
 
   img {
     margin-top: 19px;

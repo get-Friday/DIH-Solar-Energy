@@ -1,34 +1,34 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { MainComponent } from './main/main.component';
+import { AdminComponent } from './admin.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { EnergyComponent } from './energy/energy.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: MainComponent,
+    component: AdminComponent,
     children: [
       {
         path: '',
         redirectTo: 'dashboard',
-        pathMatch: 'full'
+        pathMatch: 'full',
       },
       {
         path: 'dashboard',
-        component: DashboardComponent
-      },
-      {
-        path: 'units',
-        loadChildren: () => import('../units/units.module')
-          .then((m) => m.UnitsModule)
+        component: DashboardComponent,
       },
       {
         path: 'energy',
-        component: EnergyComponent
-      }
-    ]
+        component: EnergyComponent,
+      },
+      {
+        path: 'units',
+        loadChildren: () =>
+          import('../units/units.module').then((m) => m.UnitsModule),
+      },
+    ],
   },
 ];
 
@@ -36,4 +36,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class AdminRountingModule {}
+export class AdminRoutingModule {}

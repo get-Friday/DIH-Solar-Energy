@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
 import IUnits from 'src/app/models/units.model';
-import { UnitsService } from 'src/app/services/units.service';
 
 @Component({
   selector: 'DIH-list',
@@ -11,7 +10,7 @@ import { UnitsService } from 'src/app/services/units.service';
 export class ListComponent implements OnInit {
   unitList: IUnits[] = []
 
-  constructor(private unitsService: UnitsService) { }
+  constructor() { }
 
   ngOnInit(): void {
   }

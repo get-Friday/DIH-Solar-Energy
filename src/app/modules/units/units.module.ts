@@ -1,20 +1,21 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { UnitsRountingModule } from './units-routing.module';
 
+import { UnitsRoutingModule } from './units-routing.module';
+import { UnitsComponent } from './units.component';
 import { ListComponent } from './list/list.component';
-import { MainComponent } from './main/main.component';
 import { NewComponent } from './new/new.component';
+
 
 @NgModule({
   declarations: [
-    MainComponent,
+    UnitsComponent,
     ListComponent,
     NewComponent
   ],
   imports: [
     CommonModule,
-    UnitsRountingModule
+    UnitsRoutingModule
   ]
 })
 export class UnitsModule { }

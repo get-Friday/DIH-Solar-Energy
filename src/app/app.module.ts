@@ -3,7 +3,6 @@ import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { MatIconModule } from '@angular/material/icon';
 import { HttpClientModule } from '@angular/common/http';
-import { AdminModule } from './modules/admin/admin.module';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
@@ -22,7 +21,6 @@ import { LoginComponent } from './pages/login/login.component';
     MatIconModule,
     HttpClientModule,
     AppRoutingModule,
-    AdminModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

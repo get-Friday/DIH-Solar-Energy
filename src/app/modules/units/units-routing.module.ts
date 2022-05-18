@@ -1,14 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-
 import { ListComponent } from './list/list.component';
-import { MainComponent } from './main/main.component';
 import { NewComponent } from './new/new.component';
+import { UnitsComponent } from './units.component';
 
 const routes: Routes = [
   {
-    path: 'units',
-    component: MainComponent,
+    path: '',
+    component: UnitsComponent,
     children: [
       {
         path: '',
@@ -22,13 +21,13 @@ const routes: Routes = [
       {
         path: 'new',
         component: NewComponent
-      }
+      },
     ]
   }
-]
+];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule],
+  exports: [RouterModule]
 })
-export class UnitsRountingModule {}
+export class UnitsRoutingModule { }

@@ -1,9 +1,0 @@
-@import '/src/styles.scss';
-
-main {
-  @include displayFlex(row, normal, normal, normal);
-
-  width: 100%;
-
-  font-family: 'Poppins', sans-serif;
-}

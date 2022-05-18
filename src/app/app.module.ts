@@ -3,7 +3,7 @@ import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { Route, RouterModule } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
-import { AdminModule } from './admin/admin.module';
+import { AdminModule } from './modules/admin/admin.module';
 
 import { AppComponent } from './app.component';
 import { LoginFormComponent } from './components/login-form/login-form.component';
@@ -16,7 +16,7 @@ const ROUTES: Route[] = [
   },
   {
     path: 'admin',
-    loadChildren: () => import('./admin/admin.module')
+    loadChildren: () => import('./modules/admin/admin.module')
       .then((m) => m.AdminModule)
   }
 ]

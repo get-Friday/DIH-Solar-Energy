@@ -3,6 +3,7 @@ import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { Route, RouterModule } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
+import { HttpClientModule } from '@angular/common/http';
 import { AdminModule } from './modules/admin/admin.module';
 
 import { AppComponent } from './app.component';
@@ -33,6 +34,7 @@ const ROUTES: Route[] = [
     FormsModule,
     RouterModule.forRoot(ROUTES),
     MatIconModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

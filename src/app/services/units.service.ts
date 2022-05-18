@@ -9,7 +9,7 @@ export class UnitsService {
 
   constructor(private http: HttpClient) { }
 
-  getUnits():void {
+  getUnits(){
     this.http
       .get<IUnits[]>("http://localhost:3000/units")
       .subscribe((value: IUnits[]) => {

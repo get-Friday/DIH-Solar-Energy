@@ -3,5 +3,5 @@ export default interface IUnits {
   alias: string;
   located: string;
   brand: string;
-  model: string;
+  model: number;
 }

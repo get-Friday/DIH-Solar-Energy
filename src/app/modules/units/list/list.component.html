@@ -1,1 +1,31 @@
-<p>list works</p>
+<section class="list-units">
+  <div *ngIf="unitList.length; else empty">
+    <h2>Lista de Unidades</h2>
+    <table>
+      <tr>
+        <th>#</th>
+        <th>Apelido</th>
+        <th>Local</th>
+        <th>Marca</th>
+        <th>Modelo</th>
+      </tr>
+      <tr *ngFor="let unit of unitList">
+        <th>{{ unit.id }}</th>
+        <th>{{ unit.alias }}</th>
+        <th>{{ unit.located }}</th>
+        <th>{{ unit.brand }}</th>
+        <th>{{ unit.model }}</th>
+        <th>
+          <button>Editar</button>
+        </th>
+        <th>
+          <button>Remover</button>
+        </th>
+      </tr>
+    </table>
+    <button>Nova unidade</button>
+  </div>
+  <ng-template #empty>
+    <h2>Lista vazia.</h2>
+  </ng-template>
+</section>

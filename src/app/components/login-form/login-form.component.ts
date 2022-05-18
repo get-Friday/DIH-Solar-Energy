@@ -18,7 +18,7 @@ export class LoginFormComponent implements OnInit {
 
   validate() {
     if (this.userService.validateUser(this.email, this.password)) {
-      this.route.navigateByUrl('dashboard');
+      this.route.navigateByUrl('admin');
     } else {
       this.failedLogin = true;
     }

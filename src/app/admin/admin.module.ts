@@ -9,8 +9,19 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 
 const ROUTES: Route[] = [
   {
-    path: 'dashboard',
+    path: 'admin',
     component: MainComponent,
+    children: [
+      {
+        path: '',
+        redirectTo: 'dashboard',
+        pathMatch: 'full'
+      },
+      {
+        path: 'dashboard',
+        component: DashboardComponent
+      }
+    ]
   },
 ]
 

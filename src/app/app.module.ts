@@ -15,7 +15,7 @@ const ROUTES: Route[] = [
     component: LoginComponent,
   },
   {
-    path: 'dashboard',
+    path: 'admin',
     loadChildren: () => import('./admin/admin.module')
       .then((m) => m.AdminModule)
   }

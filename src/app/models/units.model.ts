@@ -4,4 +4,5 @@ export default interface IUnits {
   located: string;
   brand: string;
   model: number;
+  active: boolean;
 }

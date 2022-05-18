@@ -9,7 +9,7 @@
         <th>Marca</th>
         <th>Modelo</th>
       </tr>
-      <tr *ngFor="let unit of unitList">
+      <tr *ngFor="let unit of unitList" [ngClass]="{ 'disabled': !unit.active }">
         <th>{{ unit.id }}</th>
         <th>{{ unit.alias }}</th>
         <th>{{ unit.located }}</th>
@@ -23,9 +23,9 @@
         </th>
       </tr>
     </table>
-    <button>Nova unidade</button>
   </div>
   <ng-template #empty>
     <h2>Lista vazia.</h2>
   </ng-template>
+  <button routerLink="/admin/units/new">Nova unidade</button>
 </section>

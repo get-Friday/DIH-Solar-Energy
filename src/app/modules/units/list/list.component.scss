@@ -7,5 +7,66 @@
     width: 100%;
     display: flex;
     justify-content: flex-end;
+
+    margin-top: 202px;
+  }
+}
+
+table {
+  border-collapse: collapse;
+
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+  thead {
+    tr {
+      th {
+        text-align: start;
+        padding: 18px 0 10px 16px;
+
+        &:first-child {
+          width: 128px;
+        }
+
+        &:nth-child(2) {
+          width: 201px;
+        }
+
+        &:nth-child(3) {
+          width: 290px;
+        }
+
+        &:nth-child(4),
+        &:nth-child(5) {
+          width: 160px;
+        }
+      }
+    }
+  }
+
+  tbody {
+    background-color: #FFF;
+    tr {
+      border-top: 1px solid #E8E8E8;
+      border-bottom: 1px solid #E8E8E8;
+
+      td {
+        padding: 16px;
+
+        button {
+          width: min-content;
+          padding: 8px 16px;
+
+          border-radius: 4px;
+
+          &.btn-edit {
+            background-color: #8DB51B;
+          }
+
+          &.btn-remove {
+            background-color: #D82D56;
+          }
+        }
+      }
+    }
   }
 }

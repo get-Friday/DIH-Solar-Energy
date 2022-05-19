@@ -36,6 +36,10 @@ html {
     opacity: 0.4;
     cursor: not-allowed;
   }
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .lbl {

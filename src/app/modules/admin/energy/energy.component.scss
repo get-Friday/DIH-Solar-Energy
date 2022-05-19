@@ -1,6 +1,26 @@
+@import '/src/styles.scss';
+
+:host {
+  height: 100vh;
+}
+
 h1 {
   background-color: #FFF;
   margin: 0;
   padding: 33px 0 33px 40px;
   font-weight: 700;
+}
+
+section {
+  margin-top: 20px;
+  margin-left: 62px;
+
+  form {
+    @include displayFlex(column, normal, normal, flex-start);
+
+    input,
+    select {
+      margin-bottom: 35px;
+    }
+  }
 }

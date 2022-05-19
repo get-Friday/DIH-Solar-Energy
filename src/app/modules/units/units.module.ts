@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
+import { FormsModule } from '@angular/forms';
 import { UnitsRoutingModule } from './units-routing.module';
+
 import { UnitsComponent } from './units.component';
 import { ListComponent } from './list/list.component';
 import { NewComponent } from './new/new.component';
@@ -15,7 +16,8 @@ import { NewComponent } from './new/new.component';
   ],
   imports: [
     CommonModule,
-    UnitsRoutingModule
+    UnitsRoutingModule,
+    FormsModule
   ]
 })
 export class UnitsModule { }

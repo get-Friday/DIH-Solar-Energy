@@ -39,6 +39,10 @@ nav {
       color: #fff;
     }
 
+    &:hover {
+      cursor: pointer;
+    }
+
     mat-icon {
       padding: 0 24px;
     }

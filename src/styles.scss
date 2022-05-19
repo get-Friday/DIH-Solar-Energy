@@ -32,14 +32,14 @@ html {
 
   padding: 16px;
 
-  &:disabled {
-    opacity: 0.4;
-    cursor: not-allowed;
-  }
-
   &:hover {
     cursor: pointer;
   }
+
+    &:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
 }
 
 .lbl {

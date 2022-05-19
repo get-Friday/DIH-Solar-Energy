@@ -17,4 +17,8 @@ export class UnitsService {
   addUnit(unit: IUnits): Observable<IUnits> {
     return this.http.post<IUnits>('http://localhost:3000/units', unit)
   }
+
+  removeUnit(id: number): Observable<number> {
+    return this.http.delete<number>(`http://localhost:3000/units/${id}`)
+  }
 }

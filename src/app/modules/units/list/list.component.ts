@@ -14,10 +14,20 @@ export class ListComponent implements OnInit {
   constructor(private unitsService: UnitsService) { }
 
   ngOnInit(): void {
-    this.unitsService.getUnits()
-      .subscribe((result: IUnits[]) => {
-        this.unitList = result
-      });
+    this.updateList()
   }
 
+  updateList() {
+    this.unitsService.getUnits()
+    .subscribe((result: IUnits[]) => {
+      this.unitList = result
+    });
+  }
+
+  removeUnit(id: number) {
+    this.unitsService.removeUnit(id)
+      .subscribe(() => {
+        this.updateList()
+      })
+  }
 }

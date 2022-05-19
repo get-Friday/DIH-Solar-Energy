@@ -10,7 +10,7 @@ import { UnitsService } from 'src/app/services/units.service';
   styleUrls: ['./energy.component.scss']
 })
 export class EnergyComponent implements OnInit, IEnergy {
-  unitsList: IUnits[] = []
+  unitList: IUnits[] = []
   id: number;
   unitId: number;
   date: string;
@@ -20,7 +20,10 @@ export class EnergyComponent implements OnInit, IEnergy {
 
   ngOnInit(): void {
     this.unitsService.getUnits()
-      .subscribe(arg => this.unitsList = arg);
+      .subscribe(arg => {
+        this.unitList = arg;
+        this.unitId = arg[0].id;
+      });
   }
 
   onSubmit(registerEnergy: NgForm) {

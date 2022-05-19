@@ -7,6 +7,14 @@
       "brand": "Risen",
       "model": 155,
       "active": true
+    },
+    {
+      "id": 90,
+      "alias": "Unidade 3",
+      "located": "Rua 19",
+      "brand": "Canadian",
+      "model": 155,
+      "active": true
     }
   ]
 }

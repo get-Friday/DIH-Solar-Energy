@@ -3,6 +3,6 @@ export default interface IUnits {
   alias: string;
   located: string;
   brand: string;
-  model: number;
+  model?: number;
   active: boolean;
 }

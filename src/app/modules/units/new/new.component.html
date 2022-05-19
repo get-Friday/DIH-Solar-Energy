@@ -9,11 +9,7 @@
     <input class="ipt" type="text" name="brand" id="brand" required />
     <label for="model" class="lbl">Modelo</label>
     <input class="ipt" type="number" name="model" id="model" required />
-    <label for="active" class="lbl container">
-      <input type="checkbox" name="active" id="active" />
-      <span class="checkmark"></span>
-      Ativo
-    </label>
+    <mat-checkbox class="lbl" aria-label="Ativo">Ativo</mat-checkbox>
     <button type="submit" class="btn" [disabled]="!newUnit.form.valid">
       Salvar
     </button>

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 import { UnitsRoutingModule } from './units-routing.module';
 
 import { UnitsComponent } from './units.component';
@@ -17,7 +18,8 @@ import { NewComponent } from './new/new.component';
   imports: [
     CommonModule,
     UnitsRoutingModule,
-    FormsModule
+    FormsModule,
+    MatCheckboxModule
   ]
 })
 export class UnitsModule { }

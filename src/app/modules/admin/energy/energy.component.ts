@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import IEnergy from 'src/app/models/energy.model';
 import IUnits from 'src/app/models/units.model';
 import { UnitsService } from 'src/app/services/units.service';
 
@@ -8,8 +9,12 @@ import { UnitsService } from 'src/app/services/units.service';
   templateUrl: './energy.component.html',
   styleUrls: ['./energy.component.scss']
 })
-export class EnergyComponent implements OnInit {
+export class EnergyComponent implements OnInit, IEnergy {
   unitsList: IUnits[] = []
+  id: number;
+  unitId: number;
+  date: string;
+  generatedKw: number;
 
   constructor(private unitsService: UnitsService) { }
 
@@ -19,6 +24,7 @@ export class EnergyComponent implements OnInit {
   }
 
   onSubmit(registerEnergy: NgForm) {
+    console.log(registerEnergy)
   }
 
 }

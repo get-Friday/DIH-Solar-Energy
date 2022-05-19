@@ -2,16 +2,29 @@
 <section>
   <form (ngSubmit)="onSubmit(registerEnergy)" #registerEnergy="ngForm">
     <label for="unit" class="lbl">Unidade geradora:</label>
-    <select name="unit" id="unit" class="ipt" required>
-      <option *ngIf="!unitsList.length" value="" disabled>CARREGANDO</option>
+    <select name="unit" id="unit" class="ipt" [(ngModel)]="unitId" required>
       <option *ngFor="let option of unitsList" value="{{ option.id }}">
         {{ option.alias }}
       </option>
     </select>
     <label for="date" class="lbl">Mês/Ano</label>
-    <input type="month" name="date" id="date" class="ipt" required />
+    <input
+      type="month"
+      name="date"
+      id="date"
+      class="ipt"
+      [(ngModel)]="date"
+      required
+    />
     <label for="totalKw" class="lbl">Total kw gerado</label>
-    <input type="number" name="totalKw" id="totalKw" class="ipt" required />
+    <input
+      type="number"
+      name="totalKw"
+      id="totalKw"
+      class="ipt"
+      [(ngModel)]="generatedKw"
+      required
+    />
     <button type="submit" class="btn" [disabled]="!registerEnergy.form.valid">
       Cadastrar
     </button>

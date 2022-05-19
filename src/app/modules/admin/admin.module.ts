@@ -8,6 +8,7 @@ import { AdminComponent } from './admin.component';
 import { NavComponent } from './nav/nav.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { EnergyComponent } from './energy/energy.component';
+import { CardsComponent } from './cards/cards.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { EnergyComponent } from './energy/energy.component';
     AdminComponent,
     NavComponent,
     DashboardComponent,
-    EnergyComponent
+    EnergyComponent,
+    CardsComponent
   ],
   imports: [
     CommonModule,

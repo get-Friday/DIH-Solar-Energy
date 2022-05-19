@@ -34,12 +34,13 @@ html {
 
   &:hover {
     cursor: pointer;
+    opacity: 0.9;
   }
 
-    &:disabled {
-      opacity: 0.4;
-      cursor: not-allowed;
-    }
+  &:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
 }
 
 .lbl {

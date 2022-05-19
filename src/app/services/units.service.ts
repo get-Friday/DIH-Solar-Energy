@@ -13,4 +13,8 @@ export class UnitsService {
   getUnits(): Observable<IUnits[]> {
     return this.http.get<IUnits[]>("http://localhost:3000/units")
   }
+
+  addUnit(unit: IUnits): Observable<IUnits> {
+    return this.http.post<IUnits>('http://localhost:3000/units', unit)
+  }
 }

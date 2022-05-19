@@ -19,7 +19,7 @@ import { NewComponent } from './new/new.component';
     CommonModule,
     UnitsRoutingModule,
     FormsModule,
-    MatCheckboxModule
+    MatCheckboxModule,
   ]
 })
 export class UnitsModule { }

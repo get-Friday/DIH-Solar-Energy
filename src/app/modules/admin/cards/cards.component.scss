@@ -26,4 +26,14 @@ section.card {
 
     margin: 0 0 24px 0;
   }
+
+  &:hover {
+    border: 1px solid #3751FF;
+    color: #3751FF;
+    cursor: pointer;
+
+    h3 {
+      color: #3751FF;
+    }
+  }
 }

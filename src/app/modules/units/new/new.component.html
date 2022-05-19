@@ -1,15 +1,19 @@
 <section class="new-unit">
   <h2>Cadastro de Unidade Geradora</h2>
   <form>
-    <input type="text" name="alias" id="alias" />
-    <label for="located">Local</label>
-    <input type="text" name="located" id="located" />
-    <label for="brand">Marca</label>
-    <input type="text" name="brand" id="brand" />
-    <label for="model">Modelo</label>
-    <input type="number" name="model" id="model" />
-    <input type="checkbox" name="active" id="active">
-    <label for="active">Ativo</label>
-    <button>Salvar</button>
+    <label for="alias" class="lbl">Apelido</label>
+    <input class="ipt" type="text" name="alias" id="alias" />
+    <label for="located" class="lbl">Local</label>
+    <input class="ipt" type="text" name="located" id="located" />
+    <label for="brand" class="lbl">Marca</label>
+    <input class="ipt" type="text" name="brand" id="brand" />
+    <label for="model" class="lbl">Modelo</label>
+    <input class="ipt" type="number" name="model" id="model" />
+    <label for="active" class="lbl container" >
+      <input type="checkbox" name="active" id="active">
+      <span class="checkmark"></span>
+      Ativo
+    </label>
+    <button class="btn">Salvar</button>
   </form>
 </section>

@@ -1,13 +1,48 @@
 /* You can add global styles to this file, and also import other style files */
-$button-color: #4cbc9a;
-$disabled-input-color: #8cc8b6;
-$secondary-button-color: #4C5DF1;
+$button-color: #4CBC9A;
 
 body,
 html {
   margin: 0;
   padding: 0;
   height: 100vh;
+}
+
+.ipt {
+  border: 1px solid;
+  outline: none;
+
+  font-size: 24px;
+
+  border-radius: 4px;
+
+  padding: 15px 10px 15px 20px;
+}
+
+.btn {
+  width: 252px;
+
+  background-color: #4C5DF1;
+  color: #FFF;
+
+  border: none;
+  border-radius: 20px;
+
+  font-size: 18px;
+
+  padding: 16px;
+
+  &:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+}
+
+.lbl {
+  font-size: 24px;
+  font-weight: 700;
+
+  margin-bottom: 10px;
 }
 
 @mixin displayFlex($direction, $alignContent, $justify, $alignItems) {

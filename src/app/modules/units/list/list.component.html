@@ -27,9 +27,12 @@
         </tr>
       </tbody>
     </table>
+    <div class="flex-end">
+      <button type="button" class="btn" routerLink="/admin/units/new">Nova unidade</button>
+    </div>
   </div>
   <ng-template #empty>
     <h2>Lista vazia.</h2>
+    <button type="button" class="btn" routerLink="/admin/units/new">Nova unidade</button>
   </ng-template>
-  <button routerLink="/admin/units/new">Nova unidade</button>
 </section>

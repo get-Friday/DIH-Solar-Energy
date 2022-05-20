@@ -19,10 +19,10 @@
           <td>{{ unit.brand }}</td>
           <td>{{ unit.model + 'w' }}</td>
           <td>
-            <button class="btn btn-edit">Editar</button>
+            <button class="btn btn-edit" (click)="edit(unit.id)">Editar</button>
           </td>
           <td>
-            <button class="btn btn-remove" (click)="removeUnit(unit.id)">Remover</button>
+            <button class="btn btn-remove" (click)="remove(unit.id)">Remover</button>
           </td>
         </tr>
       </tbody>

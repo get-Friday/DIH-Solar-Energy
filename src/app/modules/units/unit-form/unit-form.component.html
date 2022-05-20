@@ -1,0 +1,48 @@
+<form (ngSubmit)="onSubmit(newUnit, action); resetForm()" #newUnit="ngForm">
+  <label for="alias" class="lbl">Apelido</label>
+  <input
+    class="ipt"
+    type="text"
+    name="alias"
+    id="alias"
+    [(ngModel)]="model.alias"
+    required
+  />
+  <label for="located" class="lbl">Local</label>
+  <input
+    class="ipt"
+    type="text"
+    name="located"
+    id="located"
+    [(ngModel)]="model.located"
+    required
+  />
+  <label for="brand" class="lbl">Marca</label>
+  <input
+    class="ipt"
+    type="text"
+    name="brand"
+    id="brand"
+    [(ngModel)]="model.brand"
+    required
+  />
+  <label for="model" class="lbl">Modelo</label>
+  <input
+    class="ipt"
+    type="number"
+    name="model"
+    id="model"
+    [(ngModel)]="model.model"
+    required
+  />
+  <mat-checkbox
+    class="lbl"
+    aria-label="Ativo"
+    name="active"
+    [(ngModel)]="model.active"
+    >Ativo</mat-checkbox
+  >
+  <button type="submit" class="btn" [disabled]="!newUnit.form.valid">
+    Salvar
+  </button>
+</form>

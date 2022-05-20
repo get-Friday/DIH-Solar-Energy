@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 import IUnits from 'src/app/models/units.model';
 import { UnitsService } from 'src/app/services/units.service';
@@ -11,7 +12,7 @@ import { UnitsService } from 'src/app/services/units.service';
 export class ListComponent implements OnInit {
   unitList: IUnits[] = [];
 
-  constructor(private unitsService: UnitsService) {}
+  constructor(private unitsService: UnitsService, private route: Router) {}
 
   ngOnInit(): void {
     this.updateList();
@@ -23,9 +24,13 @@ export class ListComponent implements OnInit {
     });
   }
 
-  removeUnit(id: number) {
+  remove(id: number) {
     this.unitsService.removeUnit(id).subscribe(() => {
       this.updateList();
     });
+  }
+
+  edit(id: number) {
+    this.route.navigate(['admin', 'units', 'edit', id])
   }
 }

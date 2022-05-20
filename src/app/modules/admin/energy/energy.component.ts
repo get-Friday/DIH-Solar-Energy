@@ -28,7 +28,7 @@ export class EnergyComponent implements OnInit {
 
   ngOnInit(): void {
     this.unitsService.getUnits().subscribe((arg) => {
-      const activeUnits = arg.filter((unit) => unit.active == true);
+      const activeUnits = arg.filter((unit) => unit.active);
       this.activeList = activeUnits;
       this.model.unit = activeUnits[0].id;
     });

@@ -1,6 +1,6 @@
 export default interface IEnergy {
     id: number;
-    unitId: number;
+    unit: number;
     date: string;
     generatedKw: number;
 }

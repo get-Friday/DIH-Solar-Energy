@@ -1,8 +1,10 @@
 <h1>Lançamento de geração mensal</h1>
 <section>
+  <pre> Option: {{ activeList | json }} </pre>
+  <pre> Form: {{ model | json }} </pre>
   <form (ngSubmit)="onSubmit(registerEnergy)" #registerEnergy="ngForm">
     <label for="unit" class="lbl">Unidade geradora:</label>
-    <select name="unit" id="unit" class="ipt" [(ngModel)]="unitId" required>
+    <select name="unit" id="unit" class="ipt" [(ngModel)]="model.unit" required>
       <option *ngFor="let option of activeList" value="{{ option.id }}">
         {{ option.alias }}
       </option>
@@ -13,7 +15,7 @@
       name="date"
       id="date"
       class="ipt"
-      [(ngModel)]="date"
+      [(ngModel)]="model.date"
       required
     />
     <label for="totalKw" class="lbl">Total kw gerado</label>
@@ -22,7 +24,8 @@
       name="totalKw"
       id="totalKw"
       class="ipt"
-      [(ngModel)]="generatedKw"
+      min="1"
+      [(ngModel)]="model.generatedKw"
       required
     />
     <button type="submit" class="btn" [disabled]="!registerEnergy.form.valid">

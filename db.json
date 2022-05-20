@@ -14,7 +14,27 @@
       "located": "Rua 19",
       "brand": "Canadian",
       "model": 155,
-      "active": false
+      "active": true
+    }
+  ],
+  "energy": [
+    {
+      "id": 7350,
+      "unit": 123,
+      "date": "2019-04",
+      "totalKw": 17
+    },
+    {
+      "id": 7217,
+      "unit": 90,
+      "date": "2019-04",
+      "totalKw": 29
+    },
+    {
+      "id": 5175,
+      "unit": "90",
+      "date": "2022-02",
+      "totalKw": 180
     }
   ]
 }

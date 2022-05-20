@@ -9,8 +9,20 @@
       pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
       placeholder="Email"
       [(ngModel)]="email"
+      [ngClass]="{warn: (emailInput.dirty && (emailInput.errors?.['required'] || emailInput.errors?.['pattern'])) || failedLogin}"
+      #emailInput="ngModel"
       required
     />
+    <section class="warn-icon" *ngIf="emailInput.invalid && (emailInput.dirty || emailInput.touched)">
+      <mat-icon *ngIf="emailInput.errors?.['required'] || emailInput.errors?.['pattern']">error_outline</mat-icon>
+    </section>
+    <section
+      class="warn-text"
+      *ngIf="emailInput.invalid && (emailInput.dirty || emailInput.touched)"
+    >
+      <p *ngIf="emailInput.errors?.['required']">Email é requirido!</p>
+      <p *ngIf="emailInput.errors?.['pattern']">Email inválido!</p>
+    </section>
   </div>
   <div class="input-container">
     <mat-icon>lock_outline</mat-icon>
@@ -21,9 +33,12 @@
       id="password"
       placeholder="Senha"
       [(ngModel)]="password"
+      [ngClass]="{warn: failedLogin}"
       required
     />
+    <section *ngIf="failedLogin" class="warn-text">
+      Email ou senha não encontrados.
+    </section>
   </div>
-  <div *ngIf="failedLogin" id="warn">Email ou senha não encontrados.</div>
   <button [disabled]="!login.form.valid" (click)="validate()">Login</button>
 </form>

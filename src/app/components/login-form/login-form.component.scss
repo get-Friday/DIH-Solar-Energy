@@ -9,13 +9,9 @@ form {
 
   input {
     font-size: 16px;
-
     border-radius: 10px;
-
     width: 464px;
-
     padding: 1.2rem 10px 1.2rem 44px;
-    margin-bottom: 20px;
   }
 
   button {
@@ -39,11 +35,29 @@ form {
     position: relative;
     width: 100%;
 
+    margin-bottom: 20px;
+
     mat-icon {
       color: #A098AE;
       position: absolute;
       top: 15px;
       left: 15px;
+    }
+
+    .warn-text {
+      margin-top: 5px;
+      color: #FF0000;
+    }
+
+    .warn {
+      border: 1px solid #FF0000;
+    }
+
+    .warn-icon {
+      mat-icon {
+        left: 464px;
+        color: #FF0000;
+      }
     }
   }
 }

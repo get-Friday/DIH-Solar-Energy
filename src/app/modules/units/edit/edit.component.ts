@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { UnitsService } from 'src/app/services/units.service';
 
 @Component({
   selector: 'DIH-edit',
@@ -9,7 +10,7 @@ import { ActivatedRoute } from '@angular/router';
 export class EditComponent implements OnInit {
   id: number;
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute, private unitsService: UnitsService) { }
 
   ngOnInit(): void {
     this.route.params.subscribe(param => {

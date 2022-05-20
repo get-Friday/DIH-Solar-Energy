@@ -11,7 +11,11 @@ export class UnitsService {
   constructor(private http: HttpClient) { }
 
   getUnits(): Observable<IUnits[]> {
-    return this.http.get<IUnits[]>("http://localhost:3000/units")
+    return this.http.get<IUnits[]>('http://localhost:3000/units')
+  }
+
+  getUnitToEdit(id: number): Observable<IUnits> {
+    return this.http.get<IUnits>(`http://localhost:3000/units/${id}`)
   }
 
   addUnit(unit: IUnits): Observable<IUnits> {
@@ -20,5 +24,9 @@ export class UnitsService {
 
   removeUnit(id: number): Observable<number> {
     return this.http.delete<number>(`http://localhost:3000/units/${id}`)
+  }
+
+  editUnit(id: number, body: IUnits): Observable<IUnits> {
+    return this.http.put<IUnits>(`http://localhost:3000/units/${id}`, body)
   }
 }

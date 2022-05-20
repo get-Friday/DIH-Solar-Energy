@@ -13,8 +13,14 @@
       #emailInput="ngModel"
       required
     />
-    <section class="warn-icon" *ngIf="emailInput.invalid && (emailInput.dirty || emailInput.touched)">
-      <mat-icon *ngIf="emailInput.errors?.['required'] || emailInput.errors?.['pattern']">error_outline</mat-icon>
+    <section
+      class="warn-icon"
+      *ngIf="emailInput.invalid && (emailInput.dirty || emailInput.touched)"
+    >
+      <mat-icon
+        *ngIf="emailInput.errors?.['required'] || emailInput.errors?.['pattern']"
+        >error_outline</mat-icon
+      >
     </section>
     <section
       class="warn-text"
@@ -33,7 +39,7 @@
       id="password"
       placeholder="Senha"
       [(ngModel)]="password"
-      [ngClass]="{warn: failedLogin}"
+      [ngClass]="{ warn: failedLogin }"
       required
     />
     <section *ngIf="failedLogin" class="warn-text">

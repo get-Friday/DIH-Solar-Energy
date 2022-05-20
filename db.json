@@ -2,7 +2,7 @@
   "units": [
     {
       "id": 123,
-      "alias": "Unidade 28",
+      "alias": "Unidade 1",
       "located": "Brasil",
       "brand": "Risen",
       "model": 155,
@@ -14,7 +14,7 @@
       "located": "Rua 19",
       "brand": "Canadian",
       "model": 155,
-      "active": true
+      "active": false
     }
   ]
 }

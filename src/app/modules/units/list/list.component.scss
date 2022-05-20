@@ -1,4 +1,4 @@
-@import '/src/styles.scss';
+@import "/src/styles.scss";
 
 .list-units {
   @include displayFlex(column, normal, flex-start, center);
@@ -44,10 +44,14 @@ table {
   }
 
   tbody {
-    background-color: #FFF;
+    background-color: #fff;
     tr {
-      border-top: 1px solid #E8E8E8;
-      border-bottom: 1px solid #E8E8E8;
+      border-top: 1px solid #e8e8e8;
+      border-bottom: 1px solid #e8e8e8;
+
+      &.disabled {
+        color: rgba($color: #000, $alpha: 0.4);
+      }
 
       td {
         padding: 16px;
@@ -55,15 +59,14 @@ table {
         button {
           width: min-content;
           padding: 8px 16px;
-
           border-radius: 4px;
-
+          color: #fff;
           &.btn-edit {
-            background-color: #8DB51B;
+            background-color: #8db51b;
           }
 
           &.btn-remove {
-            background-color: #D82D56;
+            background-color: #d82d56;
           }
         }
       }

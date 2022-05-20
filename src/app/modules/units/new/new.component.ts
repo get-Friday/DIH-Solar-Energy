@@ -3,7 +3,6 @@ import { NgForm } from '@angular/forms';
 import IUnits from 'src/app/models/units.model';
 import { UnitsService } from 'src/app/services/units.service';
 
-
 @Component({
   selector: 'DIH-new',
   templateUrl: './new.component.html',
@@ -11,7 +10,7 @@ import { UnitsService } from 'src/app/services/units.service';
   encapsulation: ViewEncapsulation.None,
 })
 export class NewComponent implements OnInit {
-  unit: IUnits = {
+  model: IUnits = {
     id: 0,
     alias: '',
     located: '',
@@ -19,21 +18,25 @@ export class NewComponent implements OnInit {
     active: false,
   };
 
-  constructor(private unitsService: UnitsService) {}
+  constructor(private unitsService: UnitsService) { }
 
   ngOnInit(): void {}
 
   onSubmit(newUnit: NgForm) {
-    let unitObject: IUnits = newUnit.value;
-    unitObject = {
+    let formObj: IUnits = newUnit.value;
+
+    formObj = {
       id: Math.floor(Math.random() * 1000),
-      ...unitObject,
+      ...formObj,
     };
-    this.unitsService.addUnit(unitObject);
+
+    this.unitsService.addUnit(formObj).subscribe(() => {
+      this.resetForm();
+    });
   }
 
   resetForm() {
-    this.unit = {
+    this.model = {
       id: 0,
       alias: '',
       located: '',

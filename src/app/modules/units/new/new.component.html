@@ -7,7 +7,7 @@
       type="text"
       name="alias"
       id="alias"
-      [(ngModel)]="unit.alias"
+      [(ngModel)]="model.alias"
       required
     />
     <label for="located" class="lbl">Local</label>
@@ -16,7 +16,7 @@
       type="text"
       name="located"
       id="located"
-      [(ngModel)]="unit.located"
+      [(ngModel)]="model.located"
       required
     />
     <label for="brand" class="lbl">Marca</label>
@@ -25,7 +25,7 @@
       type="text"
       name="brand"
       id="brand"
-      [(ngModel)]="unit.brand"
+      [(ngModel)]="model.brand"
       required
     />
     <label for="model" class="lbl">Modelo</label>
@@ -34,14 +34,14 @@
       type="number"
       name="model"
       id="model"
-      [(ngModel)]="unit.model"
+      [(ngModel)]="model.model"
       required
     />
     <mat-checkbox
       class="lbl"
       aria-label="Ativo"
       name="active"
-      [(ngModel)]="unit.active"
+      [(ngModel)]="model.active"
       >Ativo</mat-checkbox
     >
     <button type="submit" class="btn" [disabled]="!newUnit.form.valid">

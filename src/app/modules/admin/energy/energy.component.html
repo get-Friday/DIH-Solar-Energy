@@ -3,7 +3,7 @@
   <form (ngSubmit)="onSubmit(registerEnergy)" #registerEnergy="ngForm">
     <label for="unit" class="lbl">Unidade geradora:</label>
     <select name="unit" id="unit" class="ipt" [(ngModel)]="unitId" required>
-      <option *ngFor="let option of unitList" value="{{ option.id }}">
+      <option *ngFor="let option of activeList" value="{{ option.id }}">
         {{ option.alias }}
       </option>
     </select>

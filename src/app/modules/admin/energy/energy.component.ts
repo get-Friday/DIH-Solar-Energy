@@ -7,27 +7,26 @@ import { UnitsService } from 'src/app/services/units.service';
 @Component({
   selector: 'DIH-energy',
   templateUrl: './energy.component.html',
-  styleUrls: ['./energy.component.scss']
+  styleUrls: ['./energy.component.scss'],
 })
 export class EnergyComponent implements OnInit, IEnergy {
-  unitList: IUnits[] = []
+  activeList: IUnits[] = [];
   id: number;
   unitId: number;
   date: string;
   generatedKw: number;
 
-  constructor(private unitsService: UnitsService) { }
+  constructor(private unitsService: UnitsService) {}
 
   ngOnInit(): void {
-    this.unitsService.getUnits()
-      .subscribe(arg => {
-        this.unitList = arg;
-        this.unitId = arg[0].id;
-      });
+    this.unitsService.getUnits().subscribe((arg) => {
+      const activeUnits = arg.filter((unit) => unit.active == true);
+      this.activeList = activeUnits;
+      this.unitId = activeUnits[0].id;
+    });
   }
 
   onSubmit(registerEnergy: NgForm) {
-    console.log(registerEnergy)
+    console.log(registerEnergy);
   }
-
 }

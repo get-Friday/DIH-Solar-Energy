@@ -1,10 +1,10 @@
 <h1>Dashboard</h1>
 <div class="container">
   <div class="row">
-    <DIH-cards [title]="'Total unidades'" [value]="0"></DIH-cards>
-    <DIH-cards [title]="'Unidades ativas'" [value]="0"></DIH-cards>
-    <DIH-cards [title]="'Unidades inativas'" [value]="0"></DIH-cards>
-    <DIH-cards [title]="'Média de energia'" [value]="0 + ' kw'"></DIH-cards>
+    <DIH-cards [title]="'Total unidades'" [value]="unitsTotal"></DIH-cards>
+    <DIH-cards [title]="'Unidades ativas'" [value]="activeUnits"></DIH-cards>
+    <DIH-cards [title]="'Unidades inativas'" [value]="inactiveUnits"></DIH-cards>
+    <DIH-cards [title]="'Média de energia'" [value]="averageEnergy + ' kw'"></DIH-cards>
   </div>
   <!-- graph -->
 </div>

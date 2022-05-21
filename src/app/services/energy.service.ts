@@ -13,4 +13,8 @@ export class EnergyService {
   addEnergy(energy: IEnergy): Observable<IEnergy> {
     return this.http.post<IEnergy>('http://localhost:3000/energy', energy)
   }
+
+  getEnergy(): Observable<IEnergy[]> {
+    return this.http.get<IEnergy[]>('http://localhost:3000/energy')
+  }
 }

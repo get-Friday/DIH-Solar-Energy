@@ -23,6 +23,15 @@ export class DashboardComponent implements OnInit {
       this.unitsTotal = arg.length;
       this.activeUnits = arg.filter((unit) => unit.active).length;
       this.inactiveUnits = this.unitsTotal - this.activeUnits;
+
+      this.energyService.getEnergy().subscribe((arg) => {
+        const totalEnergy: number = arg.reduce(
+          (subtotal, item) => subtotal + item.totalKw,
+          0
+        );
+        console.log(totalEnergy)
+        this.averageEnergy = totalEnergy / this.activeUnits
+      });
     });
   }
 }

@@ -17,7 +17,7 @@ export class EnergyComponent implements OnInit {
   model: IEnergy = {
     id: 0,
     date: '',
-    generatedKw: 0,
+    totalKw: 0,
     unit: 0,
   };
 

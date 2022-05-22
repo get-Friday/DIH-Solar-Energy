@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import IUnits from 'src/app/models/units.model';
@@ -8,6 +8,7 @@ import { UnitsService } from 'src/app/services/units.service';
   selector: 'DIH-unit-form',
   templateUrl: './unit-form.component.html',
   styleUrls: ['./unit-form.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class UnitFormComponent implements OnInit {
   model: IUnits = {

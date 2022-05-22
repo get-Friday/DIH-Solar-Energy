@@ -10,13 +10,17 @@ export class AuthService {
   redirectUrl: string;
   isLoggedIn: boolean = false;
   passedLogin: boolean = false;
+  private admin: { email: string; password: string } = {
+    email: LOGIN_USER.email,
+    password: LOGIN_USER.password,
+  };
 
   constructor() {}
 
   login(user): Observable<boolean> {
     if (
-      user.email == LOGIN_USER.email &&
-      user.password == LOGIN_USER.password
+      user.email == this.admin.email &&
+      user.password == this.admin.password
     ) {
       this.passedLogin = true;
     }
@@ -26,9 +30,5 @@ export class AuthService {
       of(true).pipe(tap(() => (this.isLoggedIn = true))),
       of(false).pipe(tap(() => (this.isLoggedIn = false)))
     );
-    // return of(true).pipe(
-    //   delay(1000),
-    //   tap(() => (this.isLoggedIn = true))
-    // );
   }
 }

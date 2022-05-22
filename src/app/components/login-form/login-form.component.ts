@@ -18,11 +18,11 @@ export class LoginFormComponent implements OnInit {
   ngOnInit(): void {}
 
   onSubmit(login: NgForm) {
-    console.log(login.value)
     this.authService.login(login.value).subscribe(() => {
       if (this.authService.isLoggedIn) {
-        const redirectUrl = 'admin';
-        this.route.navigateByUrl(redirectUrl);
+        this.route.navigateByUrl('admin');
+      } else {
+        this.failedLogin = true;
       }
     });
   }

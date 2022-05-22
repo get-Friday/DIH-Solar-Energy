@@ -1,4 +1,4 @@
-<form #login="ngForm">
+<form (ngSubmit)="onSubmit(login)" #login="ngForm">
   <div class="input-container">
     <mat-icon>mail_outline</mat-icon>
     <input
@@ -46,5 +46,5 @@
       Email ou senha não encontrados.
     </section>
   </div>
-  <button [disabled]="!login.form.valid" (click)="validate()">Login</button>
+  <button type="submit" [disabled]="!login.form.valid">Login</button>
 </form>

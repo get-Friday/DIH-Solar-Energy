@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
-import { UserService } from 'src/app/services/user.service';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'DIH-login-form',
@@ -12,15 +13,17 @@ export class LoginFormComponent implements OnInit {
   password: string;
   failedLogin: boolean = false;
 
-  constructor(private route: Router, private userService: UserService) {}
+  constructor(private route: Router, private authService: AuthService) {}
 
   ngOnInit(): void {}
 
-  validate() {
-    if (this.userService.validateUser(this.email, this.password)) {
-      this.route.navigateByUrl('admin');
-    } else {
-      this.failedLogin = true;
-    }
+  onSubmit(login: NgForm) {
+    console.log(login.value)
+    this.authService.login(login.value).subscribe(() => {
+      if (this.authService.isLoggedIn) {
+        const redirectUrl = 'admin';
+        this.route.navigateByUrl(redirectUrl);
+      }
+    });
   }
 }

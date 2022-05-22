@@ -29,7 +29,6 @@ export class DashboardComponent implements OnInit {
           (subtotal, item) => subtotal + item.totalKw,
           0
         );
-        console.log(totalEnergy)
         this.averageEnergy = totalEnergy / this.activeUnits
       });
     });

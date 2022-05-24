@@ -41,10 +41,17 @@ export class ChartComponent implements OnInit {
       }
     },
     scales: {
-      x: {},
+      x: {
+        grid: {
+          display: false
+        }
+      },
       y: {
         position: 'right',
-        min: 0
+        min: 0,
+        ticks: {
+          stepSize: 100
+        }
       }
     }
   }

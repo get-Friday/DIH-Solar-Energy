@@ -1,0 +1,8 @@
+<section class="chart">
+  <canvas baseChart width="961px" height="646px"
+    [data]="chartConfig.data"
+    [type]="'line'"
+    *ngIf="isReady"
+  >
+  </canvas>
+</section>

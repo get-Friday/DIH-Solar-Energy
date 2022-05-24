@@ -6,22 +6,29 @@
   height: 100%;
 
   #cover {
-    width: 979px;
+    @media screen and (max-width: 1920px) {
+      width: 979px;
+      img {
+        object-position: -399px;
+      }
+    }
+
+    @media screen and (max-width: 2560px) and (min-width: 1921px) {
+      width: 1299px;
+    }
 
     overflow: hidden;
-
     img {
-      object-position: -399px;
       object-fit: cover;
-
       height: 100%;
     }
   }
 
   #login {
     @include displayFlex(column, center, normal, center);
+    flex: 1;
 
-    padding: 132px 0 0 229px;
+    padding: 132px;
 
     img {
       height: 309px;

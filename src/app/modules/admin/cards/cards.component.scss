@@ -1,11 +1,11 @@
-@import '/src/styles.scss';
+@import "/src/styles.scss";
 
 section.card {
   @include displayFlex(column, normal, normal, center);
 
-  background-color: #FFF;
+  background-color: #fff;
 
-  border: 1px solid #DFE0EB;
+  border: 1px solid #dfe0eb;
   border-radius: 8px;
 
   width: 258px;
@@ -17,7 +17,7 @@ section.card {
 
     margin-bottom: 12px;
 
-    color: #9FA2B4;
+    color: #9fa2b4;
   }
 
   p {
@@ -28,12 +28,12 @@ section.card {
   }
 
   &:hover {
-    border: 1px solid #3751FF;
-    color: #3751FF;
+    border: 1px solid #3751ff;
+    color: #3751ff;
     cursor: pointer;
 
     h3 {
-      color: #3751FF;
+      color: #3751ff;
     }
   }
 }

@@ -8,13 +8,13 @@ import { UnitsService } from 'src/app/services/units.service';
   selector: 'DIH-unit-form',
   templateUrl: './unit-form.component.html',
   styleUrls: ['./unit-form.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
 })
 export class UnitFormComponent implements OnInit {
   model: IUnits = {
     id: 0,
     alias: '',
-    located: '',
+    location: '',
     brand: '',
     active: false,
   };
@@ -26,8 +26,8 @@ export class UnitFormComponent implements OnInit {
   ngOnInit(): void {
     if (this.editId) {
       this.unitsService
-        .getUnitToEdit(this.editId)
-        .subscribe((arg) => (this.model = arg));
+        .toEdit(this.editId)
+        .subscribe((unit) => (this.model = unit));
     }
   }
 
@@ -55,7 +55,7 @@ export class UnitFormComponent implements OnInit {
     this.model = {
       id: 0,
       alias: '',
-      located: '',
+      location: '',
       brand: '',
       active: false,
     };

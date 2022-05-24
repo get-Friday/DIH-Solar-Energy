@@ -31,6 +31,6 @@ export class ListComponent implements OnInit {
   }
 
   edit(id: number) {
-    this.route.navigate(['admin', 'units', 'edit', id])
+    this.route.navigate(['admin', 'units', 'edit', id]);
   }
 }

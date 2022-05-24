@@ -8,26 +8,25 @@ import { NgChartsModule } from 'ng2-charts';
 import { AdminComponent } from './admin.component';
 import { NavComponent } from './nav/nav.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { EnergyComponent } from './energy/energy.component';
+import { EnergyEntryComponent } from './energy-entry/energy-entry.component';
 import { CardsComponent } from './cards/cards.component';
 import { ChartComponent } from './chart/chart.component';
-
 
 @NgModule({
   declarations: [
     AdminComponent,
     NavComponent,
     DashboardComponent,
-    EnergyComponent,
+    EnergyEntryComponent,
     CardsComponent,
-    ChartComponent
+    ChartComponent,
   ],
   imports: [
     CommonModule,
     AdminRoutingModule,
     MatIconModule,
     FormsModule,
-    NgChartsModule
-  ]
+    NgChartsModule,
+  ],
 })
-export class AdminModule { }
+export class AdminModule {}

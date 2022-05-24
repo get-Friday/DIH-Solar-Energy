@@ -25,6 +25,6 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     AppRoutingModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

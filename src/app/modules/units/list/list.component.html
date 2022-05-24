@@ -12,27 +12,42 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let unit of unitList" [ngClass]="{ 'disabled': !unit.active }">
+        <tr
+          *ngFor="let unit of unitList"
+          [ngClass]="{ disabled: !unit.active }"
+        >
           <td>{{ unit.id }}</td>
           <td>{{ unit.alias }}</td>
-          <td>{{ unit.located }}</td>
+          <td>{{ unit.location }}</td>
           <td>{{ unit.brand }}</td>
-          <td>{{ unit.model + 'w' }}</td>
+          <td>{{ unit.model + "w" }}</td>
           <td>
-            <button  type="button" class="btn btn-edit" (click)="edit(unit.id)">Editar</button>
+            <button type="button" class="btn btn-edit" (click)="edit(unit.id)">
+              Editar
+            </button>
           </td>
           <td>
-            <button type="button" class="btn btn-remove" (click)="remove(unit.id)">Remover</button>
+            <button
+              type="button"
+              class="btn btn-remove"
+              (click)="remove(unit.id)"
+            >
+              Remover
+            </button>
           </td>
         </tr>
       </tbody>
     </table>
     <div class="flex-end">
-      <button type="button" class="btn" routerLink="/admin/units/new">Nova unidade</button>
+      <button type="button" class="btn" routerLink="/admin/units/new">
+        Nova unidade
+      </button>
     </div>
   </div>
   <ng-template #empty>
     <h2>Lista vazia.</h2>
-    <button type="button" class="btn" routerLink="/admin/units/new">Nova unidade</button>
+    <button type="button" class="btn" routerLink="/admin/units/new">
+      Nova unidade
+    </button>
   </ng-template>
 </section>

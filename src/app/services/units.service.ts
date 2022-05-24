@@ -14,7 +14,7 @@ export class UnitsService {
     return this.http.get<IUnits[]>('http://localhost:3000/units')
   }
 
-  getUnitToEdit(id: number): Observable<IUnits> {
+  toEdit(id: number): Observable<IUnits> {
     return this.http.get<IUnits>(`http://localhost:3000/units/${id}`)
   }
 

@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { AdminComponent } from './admin.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { EnergyComponent } from './energy/energy.component';
+import { EnergyEntryComponent } from './energy-entry/energy-entry.component';
 
 const routes: Routes = [
   {
@@ -21,7 +21,7 @@ const routes: Routes = [
       },
       {
         path: 'energy',
-        component: EnergyComponent,
+        component: EnergyEntryComponent,
       },
       {
         path: 'units',

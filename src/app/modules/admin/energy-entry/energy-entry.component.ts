@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
-import IEnergy from 'src/app/models/energy.model';
+import IGeneratedEnergy from 'src/app/models/generated-energy.model';
 import IUnits from 'src/app/models/units.model';
 
 import { EnergyService } from 'src/app/services/energy.service';
@@ -9,12 +9,13 @@ import { UnitsService } from 'src/app/services/units.service';
 
 @Component({
   selector: 'DIH-energy',
-  templateUrl: './energy.component.html',
-  styleUrls: ['./energy.component.scss'],
+  templateUrl: './energy-entry.component.html',
+  styleUrls: ['./energy-entry.component.scss'],
 })
-export class EnergyComponent implements OnInit {
+//
+export class EnergyEntryComponent implements OnInit {
   activeList: IUnits[] = [];
-  model: IEnergy = {
+  model: IGeneratedEnergy = {
     id: 0,
     date: '',
     totalKw: 0,
@@ -35,13 +36,13 @@ export class EnergyComponent implements OnInit {
   }
 
   onSubmit(registerEnergy: NgForm) {
-    let energyPackage: IEnergy = registerEnergy.value;
+    let energyEntry: IGeneratedEnergy = registerEnergy.value;
 
-    energyPackage = {
+    energyEntry = {
       id: Math.floor(Math.random() * 10000),
-      ...energyPackage,
+      ...energyEntry,
     };
 
-    this.energyService.addEnergy(energyPackage).subscribe(() => {});
+    this.energyService.addEnergy(energyEntry).subscribe(() => {});
   }
 }

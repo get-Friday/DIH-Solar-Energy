@@ -1,7 +1,7 @@
 export default interface IUnits {
   id: number;
   alias: string;
-  located: string;
+  location: string;
   brand: string;
   model?: number;
   active: boolean;

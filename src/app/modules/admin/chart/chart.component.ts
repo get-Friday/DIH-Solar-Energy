@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ChartConfiguration } from 'chart.js';
-import IEnergy from 'src/app/models/energy.model';
+import IGeneratedEnergy from 'src/app/models/generated-energy.model';
 import { EnergyService } from 'src/app/services/energy.service';
 
 @Component({
@@ -10,7 +10,7 @@ import { EnergyService } from 'src/app/services/energy.service';
 })
 export class ChartComponent implements OnInit {
   currentDate = new Date();
-  month: string[] = ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'];
+  months: string[] = ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'];
   isReady: boolean = false;
   chartConfig: any = {
     data: {
@@ -24,14 +24,14 @@ export class ChartComponent implements OnInit {
           tension: 0.4,
         },
       ],
-      labels: this.month,
+      labels: this.months,
     }
   };
   chartOptions: ChartConfiguration['options'] = {
     plugins: {
       title: {
         display: true,
-        text: 'Consumo mensal',
+        text: 'Total de energia gerada por mês',
         fullSize: true,
         align: 'start',
         font: {
@@ -74,7 +74,7 @@ export class ChartComponent implements OnInit {
     });
   }
 
-  setData(data: IEnergy[]): number[] {
+  setData(data: IGeneratedEnergy[]): number[] {
     const currentMonth = this.currentDate.getMonth();
     const currentYear = this.currentDate.getFullYear();
     const totalKw = [];
@@ -95,6 +95,6 @@ export class ChartComponent implements OnInit {
 
   setXAxisRange() {
     const currentMonth = this.currentDate.getMonth();
-    this.chartConfig.data.labels = this.month.slice(0, currentMonth + 1);
+    this.chartConfig.data.labels = this.months.slice(0, currentMonth + 1);
   }
 }

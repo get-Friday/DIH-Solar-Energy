@@ -2,7 +2,13 @@
 <section>
   <form (ngSubmit)="onSubmit(registerEnergy)" #registerEnergy="ngForm">
     <label for="unit" class="lbl">Unidade geradora:</label>
-    <select name="unit" id="unit" class="ipt" [(ngModel)]="+model.unit" required>
+    <select
+      name="unit"
+      id="unit"
+      class="ipt"
+      [(ngModel)]="+model.unit"
+      required
+    >
       <option *ngFor="let option of activeList" [ngValue]="option.id">
         {{ option.alias }}
       </option>

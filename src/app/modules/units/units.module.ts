@@ -10,7 +10,6 @@ import { NewComponent } from './new/new.component';
 import { EditComponent } from './edit/edit.component';
 import { UnitFormComponent } from './unit-form/unit-form.component';
 
-
 @NgModule({
   declarations: [
     UnitsComponent,

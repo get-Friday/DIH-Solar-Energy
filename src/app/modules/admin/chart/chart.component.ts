@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ChartConfiguration } from 'chart.js';
 import IEnergy from 'src/app/models/energy.model';
 import { EnergyService } from 'src/app/services/energy.service';
 
@@ -11,7 +12,7 @@ export class ChartComponent implements OnInit {
   currentDate = new Date();
   month: string[] = ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'];
   isReady: boolean = false;
-  chartConfig = {
+  chartConfig: any = {
     data: {
       datasets: [
         {
@@ -24,8 +25,29 @@ export class ChartComponent implements OnInit {
         },
       ],
       labels: this.month,
-    },
+    }
   };
+  chartOptions: ChartConfiguration['options'] = {
+    plugins: {
+      title: {
+        display: true,
+        text: 'Consumo mensal',
+        fullSize: true,
+        align: 'start',
+        font: {
+          weight: '800',
+          size: 20
+        }
+      }
+    },
+    scales: {
+      x: {},
+      y: {
+        position: 'right',
+        min: 0
+      }
+    }
+  }
 
   constructor(private energyService: EnergyService) {}
 

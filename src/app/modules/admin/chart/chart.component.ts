@@ -44,13 +44,21 @@ export class ChartComponent implements OnInit {
       x: {
         grid: {
           display: false
+        },
+        ticks: {
+          font: {
+            size: 16
+          }
         }
       },
       y: {
         position: 'right',
         min: 0,
         ticks: {
-          stepSize: 100
+          stepSize: 100,
+          font: {
+            size: 16
+          }
         }
       }
     }

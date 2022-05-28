@@ -12,7 +12,6 @@ import { UnitsService } from 'src/app/services/units.service';
   templateUrl: './energy-entry.component.html',
   styleUrls: ['./energy-entry.component.scss'],
 })
-//
 export class EnergyEntryComponent implements OnInit {
   activeList: IUnits[] = [];
   model: IGeneratedEnergy = {
@@ -43,6 +42,16 @@ export class EnergyEntryComponent implements OnInit {
       ...energyEntry,
     };
 
-    this.generationsService.addEnergy(energyEntry).subscribe(() => {});
+    this.generationsService.addEnergy(energyEntry).subscribe(() => {
+      this.resetForm()
+    });
+  }
+
+  resetForm() {
+    this.model = {
+      id: 0,
+      date: '',
+      totalKw: 0
+    }
   }
 }

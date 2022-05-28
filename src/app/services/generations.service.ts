@@ -6,15 +6,16 @@ import IGeneratedEnergy from '../models/generated-energy.model';
 @Injectable({
   providedIn: 'root'
 })
-export class EnergyService {
+export class GenerationsService {
+  private url: string = 'http://localhost:3000/generations';
 
   constructor(private http: HttpClient) { }
 
   addEnergy(energy: IGeneratedEnergy): Observable<IGeneratedEnergy> {
-    return this.http.post<IGeneratedEnergy>('http://localhost:3000/energy', energy)
+    return this.http.post<IGeneratedEnergy>(this.url, energy)
   }
 
   getEnergy(): Observable<IGeneratedEnergy[]> {
-    return this.http.get<IGeneratedEnergy[]>('http://localhost:3000/energy')
+    return this.http.get<IGeneratedEnergy[]>(this.url)
   }
 }

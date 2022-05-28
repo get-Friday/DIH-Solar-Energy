@@ -7,26 +7,27 @@ import IUnits from '../models/units.model';
   providedIn: 'root'
 })
 export class UnitsService {
+  private url: string = 'http://localhost:3000/units/';
 
   constructor(private http: HttpClient) { }
 
   getUnits(): Observable<IUnits[]> {
-    return this.http.get<IUnits[]>('http://localhost:3000/units')
+    return this.http.get<IUnits[]>(this.url)
   }
 
   toEdit(id: number): Observable<IUnits> {
-    return this.http.get<IUnits>(`http://localhost:3000/units/${id}`)
+    return this.http.get<IUnits>(this.url + id)
   }
 
   addUnit(unit: IUnits): Observable<IUnits> {
-    return this.http.post<IUnits>('http://localhost:3000/units', unit)
+    return this.http.post<IUnits>(this.url, unit)
   }
 
   removeUnit(id: number): Observable<number> {
-    return this.http.delete<number>(`http://localhost:3000/units/${id}`)
+    return this.http.delete<number>(this.url + id)
   }
 
   editUnit(id: number, body: IUnits): Observable<IUnits> {
-    return this.http.put<IUnits>(`http://localhost:3000/units/${id}`, body)
+    return this.http.put<IUnits>(this.url + id, body)
   }
 }

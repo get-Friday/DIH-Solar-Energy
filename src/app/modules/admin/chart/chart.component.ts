@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ChartConfiguration } from 'chart.js';
 import IGeneratedEnergy from 'src/app/models/generated-energy.model';
-import { EnergyService } from 'src/app/services/energy.service';
+import { GenerationsService } from 'src/app/services/generations.service';
 
 @Component({
   selector: 'DIH-chart',
@@ -64,10 +64,10 @@ export class ChartComponent implements OnInit {
     }
   }
 
-  constructor(private energyService: EnergyService) {}
+  constructor(private generationsService: GenerationsService) {}
 
   ngOnInit(): void {
-    this.energyService.getEnergy().subscribe((energy) => {
+    this.generationsService.getEnergy().subscribe((energy) => {
       this.setXAxisRange();
       this.chartConfig.data.datasets[0].data = this.setData(energy);
       this.isReady = true;

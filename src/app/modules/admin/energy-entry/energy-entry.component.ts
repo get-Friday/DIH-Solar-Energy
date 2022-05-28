@@ -4,7 +4,7 @@ import { NgForm } from '@angular/forms';
 import IGeneratedEnergy from 'src/app/models/generated-energy.model';
 import IUnits from 'src/app/models/units.model';
 
-import { EnergyService } from 'src/app/services/energy.service';
+import { GenerationsService } from 'src/app/services/generations.service';
 import { UnitsService } from 'src/app/services/units.service';
 
 @Component({
@@ -24,7 +24,7 @@ export class EnergyEntryComponent implements OnInit {
 
   constructor(
     private unitsService: UnitsService,
-    private energyService: EnergyService
+    private generationsService: GenerationsService
   ) {}
 
   ngOnInit(): void {
@@ -43,6 +43,6 @@ export class EnergyEntryComponent implements OnInit {
       ...energyEntry,
     };
 
-    this.energyService.addEnergy(energyEntry).subscribe(() => {});
+    this.generationsService.addEnergy(energyEntry).subscribe(() => {});
   }
 }

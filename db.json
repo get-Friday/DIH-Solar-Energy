@@ -17,7 +17,7 @@
       "active": true
     }
   ],
-  "energy": [
+  "generations": [
     {
       "id": 7350,
       "unit": 123,
@@ -59,6 +59,12 @@
       "unit": 123,
       "date": "2022-01",
       "totalKw": 150
+    },
+    {
+      "id": 6151,
+      "unit": 123,
+      "date": "2022-02",
+      "totalKw": 155
     }
   ]
 }

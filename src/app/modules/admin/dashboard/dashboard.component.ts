@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { EnergyService } from 'src/app/services/energy.service';
+import { GenerationsService } from 'src/app/services/generations.service';
 import { UnitsService } from 'src/app/services/units.service';
 
 @Component({
@@ -15,7 +15,7 @@ export class DashboardComponent implements OnInit {
 
   constructor(
     private unitsService: UnitsService,
-    private energyService: EnergyService
+    private generationsService: GenerationsService
   ) {}
 
   ngOnInit(): void {
@@ -24,7 +24,7 @@ export class DashboardComponent implements OnInit {
       this.activeUnits = arg.filter((unit) => unit.active).length;
       this.inactiveUnits = this.unitsTotal - this.activeUnits;
 
-      this.energyService.getEnergy().subscribe((arg) => {
+      this.generationsService.getEnergy().subscribe((arg) => {
         const totalEnergy: number = arg.reduce(
           (subtotal, item) => subtotal + item.totalKw,
           0

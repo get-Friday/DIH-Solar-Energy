@@ -40,7 +40,7 @@ export class UnitFormComponent implements OnInit {
       };
 
       this.unitsService.addUnit(formObj).subscribe(() => {
-        this.resetForm();
+        newUnit.reset();
       });
     }
 
@@ -49,15 +49,5 @@ export class UnitFormComponent implements OnInit {
         this.route.navigate(['admin', 'units']);
       });
     }
-  }
-
-  resetForm() {
-    this.model = {
-      id: 0,
-      alias: '',
-      location: '',
-      brand: '',
-      active: false,
-    };
   }
 }

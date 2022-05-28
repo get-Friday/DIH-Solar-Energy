@@ -43,15 +43,7 @@ export class EnergyEntryComponent implements OnInit {
     };
 
     this.generationsService.addEnergy(energyEntry).subscribe(() => {
-      this.resetForm()
+      registerEnergy.reset();
     });
-  }
-
-  resetForm() {
-    this.model = {
-      id: 0,
-      date: '',
-      totalKw: 0
-    }
   }
 }

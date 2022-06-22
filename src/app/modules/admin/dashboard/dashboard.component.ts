@@ -3,7 +3,7 @@ import { GenerationsService } from 'src/app/services/generations.service';
 import { UnitsService } from 'src/app/services/units.service';
 
 @Component({
-  selector: 'DIH-dashboard',
+  selector: 'dih-dashboard',
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss'],
 })

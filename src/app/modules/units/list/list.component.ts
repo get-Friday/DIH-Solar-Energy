@@ -5,7 +5,7 @@ import IUnits from 'src/app/models/units.model';
 import { UnitsService } from 'src/app/services/units.service';
 
 @Component({
-  selector: 'DIH-list',
+  selector: 'dih-list',
   templateUrl: './list.component.html',
   styleUrls: ['./list.component.scss'],
 })

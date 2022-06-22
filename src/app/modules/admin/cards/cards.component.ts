@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'DIH-cards',
+  selector: 'dih-cards',
   templateUrl: './cards.component.html',
   styleUrls: ['./cards.component.scss'],
 })

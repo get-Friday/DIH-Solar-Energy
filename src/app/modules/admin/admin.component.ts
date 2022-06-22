@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'DIH-admin',
+  selector: 'dih-admin',
   templateUrl: './admin.component.html',
   styleUrls: ['./admin.component.scss'],
 })

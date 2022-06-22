@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'DIH-nav',
+  selector: 'dih-nav',
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.scss'],
 })

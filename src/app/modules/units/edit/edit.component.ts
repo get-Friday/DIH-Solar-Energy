@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'DIH-edit',
+  selector: 'dih-edit',
   templateUrl: './edit.component.html',
   styleUrls: ['./edit.component.scss'],
 })

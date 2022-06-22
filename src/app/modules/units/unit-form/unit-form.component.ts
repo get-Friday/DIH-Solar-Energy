@@ -5,7 +5,7 @@ import IUnits from 'src/app/models/units.model';
 import { UnitsService } from 'src/app/services/units.service';
 
 @Component({
-  selector: 'DIH-unit-form',
+  selector: 'dih-unit-form',
   templateUrl: './unit-form.component.html',
   styleUrls: ['./unit-form.component.scss'],
   encapsulation: ViewEncapsulation.None,

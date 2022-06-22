@@ -8,7 +8,7 @@ import { GenerationsService } from 'src/app/services/generations.service';
 import { UnitsService } from 'src/app/services/units.service';
 
 @Component({
-  selector: 'DIH-energy',
+  selector: 'dih-energy',
   templateUrl: './energy-entry.component.html',
   styleUrls: ['./energy-entry.component.scss'],
 })

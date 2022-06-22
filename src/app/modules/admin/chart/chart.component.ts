@@ -4,7 +4,7 @@ import IGeneratedEnergy from 'src/app/models/generated-energy.model';
 import { GenerationsService } from 'src/app/services/generations.service';
 
 @Component({
-  selector: 'DIH-chart',
+  selector: 'dih-chart',
   templateUrl: './chart.component.html',
   styleUrls: ['./chart.component.scss'],
 })

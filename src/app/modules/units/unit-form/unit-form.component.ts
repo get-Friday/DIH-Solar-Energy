@@ -41,6 +41,7 @@ export class UnitFormComponent implements OnInit {
 
       this.unitsService.addUnit(formObj).subscribe(() => {
         newUnit.reset();
+        this.route.navigate(['admin', 'units', 'list']);
       });
     }
 

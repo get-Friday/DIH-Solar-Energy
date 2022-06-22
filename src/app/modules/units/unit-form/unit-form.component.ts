@@ -33,10 +33,9 @@ export class UnitFormComponent implements OnInit {
 
   onSubmit(newUnit: NgForm, action: string) {
     if (action == 'new') {
-      let formObj: IUnits = newUnit.value;
-      formObj = {
+      let formObj: IUnits = {
         id: Math.floor(Math.random() * 1000),
-        ...formObj,
+        ...newUnit.value
       };
 
       this.unitsService.addUnit(formObj).subscribe(() => {

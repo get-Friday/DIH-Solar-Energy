@@ -1,12 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'DIH-units',
   templateUrl: './units.component.html',
   styleUrls: ['./units.component.scss'],
 })
-export class UnitsComponent implements OnInit {
+export class UnitsComponent {
   constructor() {}
-
-  ngOnInit(): void {}
 }

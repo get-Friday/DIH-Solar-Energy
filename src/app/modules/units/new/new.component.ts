@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'DIH-new',
@@ -6,8 +6,6 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
   styleUrls: ['./new.component.scss'],
   encapsulation: ViewEncapsulation.None,
 })
-export class NewComponent implements OnInit {
+export class NewComponent {
   constructor() {}
-
-  ngOnInit(): void {}
 }

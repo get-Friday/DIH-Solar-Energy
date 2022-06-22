@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
@@ -8,14 +8,12 @@ import { AuthService } from 'src/app/services/auth.service';
   templateUrl: './login-form.component.html',
   styleUrls: ['./login-form.component.scss'],
 })
-export class LoginFormComponent implements OnInit {
+export class LoginFormComponent {
   email: string;
   password: string;
   failedLogin: boolean = false;
 
   constructor(private route: Router, private authService: AuthService) {}
-
-  ngOnInit(): void {}
 
   onSubmit(login: NgForm) {
     this.authService.login(login.value).subscribe(() => {

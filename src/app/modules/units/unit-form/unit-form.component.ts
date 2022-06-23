@@ -11,6 +11,8 @@ import { UnitsService } from 'src/app/services/units.service';
   encapsulation: ViewEncapsulation.None,
 })
 export class UnitFormComponent implements OnInit {
+  @Input() action: string;
+  @Input() editId?: number;
   model: IUnits = {
     id: 0,
     alias: '',
@@ -18,8 +20,6 @@ export class UnitFormComponent implements OnInit {
     brand: '',
     active: false,
   };
-  @Input() action: string;
-  @Input() editId?: number;
 
   constructor(private unitsService: UnitsService, private route: Router) {}
 
